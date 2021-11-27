@@ -1,9 +1,8 @@
 # Задание 1
 # Необходимо вывести имена всех учеников из списка с новой строки
-
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-# ???
-
+for name in range(len(names)):
+    print (names[name])
 
 # Задание 2
 # Необходимо вывести имена всех учеников из списка, рядом с именем показать количество букв в нём
@@ -12,7 +11,9 @@ names = ['Оля', 'Петя', 'Вася', 'Маша']
 # Петя: 4
 
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-# ???
+for name in range(len(names)):
+    print (names[name],': ',len(names[name]))
+
 
 
 # Задание 3
@@ -25,7 +26,12 @@ is_male = {
     'Маша': False,
 }
 names = ['Оля', 'Петя', 'Вася', 'Маша']
-# ???
+
+for name in range(len(names)):
+    if is_male.get(names[name]) == False :
+        print (names[name],': ','пол женский')
+    else:
+        print (names[name],': ','пол мужской')
 
 
 # Задание 4
@@ -40,7 +46,12 @@ groups = [
     ['Вася', 'Маша', 'Саша', 'Женя'],
     ['Оля', 'Петя', 'Гриша'],
 ]
-# ???
+n=1
+print ('Всего ',len(groups),' группы')
+for group in range (len(groups)):
+    print ('Группа',n,':',len(groups[group]),'ученика')
+    n+=1
+
 
 
 # Задание 5
@@ -54,4 +65,11 @@ groups = [
     ['Оля', 'Петя', 'Гриша'],
     ['Вася', 'Маша', 'Саша', 'Женя'],
 ]
-# ???
+
+n=1
+for group in range (len(groups)):
+    name = groups[group]
+    print('\nГруппа',n,':',end=' ')
+    for num in range (len(name)):
+        print (name[num],end=' ')
+    n+=1
